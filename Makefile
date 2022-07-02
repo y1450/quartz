@@ -19,9 +19,11 @@ update-force: ## Forcefully pull all changes and don't ask to patch
 serve: ## Serve Quartz locally
 	hugo-obsidian -input=content -output=assets/indices -index=true -root=. && hugo server --enableGitInfo
 setup: ## Serve Quartz locally
-	rm -rf main.zip
-	wget https://github.com/tanepiper/obsidian-garden/archive/refs/heads/main.zip
-	unzip main.zip
+	wget -nc https://github.com/tanepiper/obsidian-garden/archive/refs/heads/main.zip
+	unzip -n main.zip
 	rm -rf content
-	python main.py && hugo-obsidian -input=content -output=assets/indices -index=true -root=. && hugo server --enableGitInfo
+	python main.py && hugo-obsidian -input=content -output=assets/indices -index -root=.
+	cp _index.md ./content
+	hugo server --enableGitInfo
+
 
