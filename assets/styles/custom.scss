@@ -24,13 +24,15 @@
   --outlinegray: #343434 !important;
 }
 summary {
-  border: 4px solid transparent;
   outline: none;
   &:hover {
-    background-color: black;
+    background-color: var(--outlinegray);
+    color: var(--gray);
   }
   position: relative;
   cursor: pointer;
+  padding : 0 0 0 0.2em;
+  border-radius:3px
 }
 details {
   max-width: 500px;
@@ -48,29 +50,42 @@ summary:before {
   transform-origin: 0rem 50%;
   transition: .25s transform ease;
 }
-
-
-
 .content {
   border-top: none;
-  padding: 0em 0em 0em 0.5em;
+  padding: 0em 0em 0em 1em;
   border-top: none;
 }
-
-p {
-  margin: 0;
-  padding-bottom: 10px;
-  &:last-child {
-    padding: 0;
-  }
+.content > a{
+  padding : 0 0 0 0.2em;
+  border-radius:3px
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
+// menu colors
 .maa{
   &:hover{
-  background:red;
-}
+    background-color: var(--outlinegray);
+    color: var(--gray)!important;
+  }
+
 display:block;
+}
+a.active{
+  // color: #f28482;
+  margin: 1px;
+  font-weight:800;
+  position: relative;
+  background-color: var(--outlinegray);
+  color: var(--gray);
+}
+.menu-toc{
+  max-width:16em;
+  min-width:8em;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  max-height:50vh;
+
 }

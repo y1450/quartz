@@ -23,9 +23,7 @@
         </div>
         </details>
       {{ else if and .IsPage .Content }}
-      <div class="content">
           {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
-      </div>
       {{ end }}
     {{ end }}
 {{ end }}

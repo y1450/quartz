@@ -1,6 +1,6 @@
 div.sticky {
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   // background-color: yellow;
 }
@@ -20,7 +20,6 @@ div.sticky {
 
 }
 .tree details {
-    margin-bottom: 0.3em;
 }
 .tree a{
     // font-weight:unset;
@@ -29,13 +28,7 @@ div.sticky {
     // font-size: 0.9rem;
 }
 
-a.active{
-  // color: #f28482;
-  margin: 1px;
-  padding: 0.1em 0em;
-  position: relative;
-  background-color: var(--primary)
-}
+
 /* The Modal (background) */
 .modal {
   visibility: hidden; /* Hidden by default */
