@@ -82,8 +82,7 @@ a.active{
   color: var(--gray);
 }
 .menu-toc{
-  max-width:16em;
-  min-width:8em;
+  width:16em;
   overflow-x:hidden;
   overflow-y:scroll;
   max-height:50vh;
