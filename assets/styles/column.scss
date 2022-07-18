@@ -17,6 +17,8 @@ div.sticky {
 .tree summary {
     color: #6b879a;
     position: relative;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
 
 }
 .tree details {
@@ -25,6 +27,7 @@ div.sticky {
     // font-weight:unset;
     // color: black;
     font-weight: 600;
+    font-family: 'Source Sans Pro';
     // font-size: 0.9rem;
 }
 
