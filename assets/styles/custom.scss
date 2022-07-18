@@ -23,3 +23,54 @@
   --lightgray: #292633 !important;
   --outlinegray: #343434 !important;
 }
+summary {
+  border: 4px solid transparent;
+  outline: none;
+  &:hover {
+    background-color: black;
+  }
+  position: relative;
+  cursor: pointer;
+}
+details {
+  max-width: 500px;
+  box-sizing: border-box;
+}
+details summary::-webkit-details-marker {
+  display:none;
+}
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+summary:before {
+  content: '';
+  transform: rotate(0);
+  transform-origin: 0rem 50%;
+  transition: .25s transform ease;
+}
+
+
+
+.content {
+  border-top: none;
+  padding: 0em 0em 0em 0.5em;
+  border-top: none;
+}
+
+p {
+  margin: 0;
+  padding-bottom: 10px;
+  &:last-child {
+    padding: 0;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.maa{
+  &:hover{
+  background:red;
+}
+display:block;
+}
