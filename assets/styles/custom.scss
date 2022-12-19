@@ -49,3 +49,12 @@ color: var(--tertiary)
 }
 
 
+.menu-bar {
+  padding-right:2em;
+}
+.menu-bar > a{
+  padding:0.2em;
+  color:var(--tertiary);
+  font-size:1.1em;
+  font-family: var(--font-header);
+}
