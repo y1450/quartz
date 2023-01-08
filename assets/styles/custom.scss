@@ -1,17 +1,16 @@
 // Add your own CSS here!
-
 :root {
-  --light: #faf8f8;
-  --dark: #141021;
-  --secondary: #284b63;
-  --tertiary: #84a59d;
-  --visited: #afbfc9;
-  --primary: #f28482;
-  --gray: #4e4e4e;
-  --lightgray: #f0f0f0;
-  --outlinegray: #dadada;
-  --million-progress-bar-color: var(--secondary);
-  --highlighted: #f5dfaf88;
+	--light: #ffffff;
+	--dark: #c34043;
+	--secondary: #0366d6;
+	--tertiary: #43242b;
+	--visited: #43242b;
+	--primary: #f28482;
+	--gray: #1e1f28;
+	--lightgray: #f0f0f0;
+	--outlinegray: #717c7c;
+	--million-progress-bar-color: var(--secondary);
+	--highlighted: #f5dfaf88;
 }
 
 [saved-theme="dark"] {
@@ -26,6 +25,36 @@
   --outlinegray: #343434 !important;
   --highlighted: #574010;
 }
+.singlePage {
+padding: 1em 30vw;
+}
+.tags {
+list-style: none;
+padding-left: 0;
+padding-bottom: 2em;
+}
+article > h1 {
+margin-top: 1.5em;
+font-size: 2em;
+}
+article a.internal-link{
+background-color: revert
+}
+#page-title > a {
+color: var(--tertiary)
+}
+.tags > li > a
+{
+  color:var(--gray)
+}
 
 
-
+.menu-bar {
+  padding-right:2em;
+}
+.menu-bar > a{
+  padding:0.2em;
+  color:var(--tertiary);
+  font-size:1.1em;
+  font-family: var(--font-header);
+}

@@ -1,5 +1,15 @@
+<div class="content-list">
+  <!-- <h2>{{ i18n "recent_notes" }}</h2> -->
+
+  <h2>{{ "Recent Blogposts" }}</h2>
+  <!--
+  You can also configure this to find related pages!
+  All you need to pass into the "page-list.html" partial
+  is a collection of pages.
+  https://gohugo.io/content-management/related/
+  -->
 <ul class="section-ul">
-    {{- range . -}}
+    {{- range where .Site.RegularPages "Type" "blog" -}}
     <li class="section-li">
         <div class="section">
             <p class="meta">
@@ -11,12 +21,17 @@
             <div class="spacer"></div>
             <ul class="tags">
                 {{ range (.GetTerms "tags") }}
-                  {{ if ne .LinkTitle "public" }}
-                    <li><a href="{{ .Permalink }}">{{ .LinkTitle | title}}</a></li>
-                  {{ end }}
+                {{ if ne .LinkTitle "public" }}
+                  <li><a href="{{ .Permalink }}">{{ .LinkTitle | title}}</a></li>
+                {{ end }}
                 {{ end }}
             </ul>
         </div>
     </li>
     {{- end -}}
 </ul>
+
+
+</div>
+
+

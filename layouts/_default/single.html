@@ -15,14 +15,12 @@
       </p>
       <ul class="tags">
           {{ range (.GetTerms "tags") }}
-          <li><a href="{{ .Permalink }}">
-          {{if (eq $.Site.Language.Lang "en")}}
+          <li><a href="{{ .Permalink }}">{{ .LinkTitle | humanize }}</a></li>
+            {{ if ne .LinkTitle "public" }}
+              <li><a href="{{ .Permalink }}">
             {{ .LinkTitle | humanize }}
-          {{else}}
-            {{ .LinkTitle }}
-          {{end}}
-            </a>
-           </li>
+          </a></li>
+            {{ end }}
           {{ end }}
       </ul>
       {{partial "toc.html" .}}
