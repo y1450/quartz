@@ -19,13 +19,6 @@
               <h3><a href="{{ .Permalink }}" class="internal-link" data-src="{{ .RelPermalink }}">{{- .Title -}}</a></h3>
             </div>
             <div class="spacer"></div>
-            <ul class="tags">
-                {{ range (.GetTerms "tags") }}
-                {{ if ne .LinkTitle "public" }}
-                  <li><a href="{{ .Permalink }}">{{ .LinkTitle | title}}</a></li>
-                {{ end }}
-                {{ end }}
-            </ul>
         </div>
     </li>
     {{- end -}}
